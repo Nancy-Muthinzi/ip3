@@ -2,6 +2,11 @@
 
 This is a web application that takes a number from a user and returns a range of numbers from 1 to the chosen number with some given exceptions.
 
+## Specifications
+* Numbers divisible by 3 are replaced with "ping"
+* Numbers divisible by 5 are replaced with "pong"
+* Numbers divisible by 15 replaced with "pingpong"
+
 ## Setup/Installation Requirements
 * This code can be viewed on any web browser available on your device.
 
