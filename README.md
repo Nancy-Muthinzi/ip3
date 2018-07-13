@@ -57,4 +57,4 @@ Copyright (c) 2018 **Nancy Muthinzi**
 ## Acknowledgments
 
 * A big up to Moringa a School for the lessons on how to program.
-* Many thanks to my classmates at Moringa School for working together with me and assisting where the code didn't work properly.
+* Many thanks to my classmates and Technical mentors at Moringa School for working together with me and assisting where the code didn't work properly.

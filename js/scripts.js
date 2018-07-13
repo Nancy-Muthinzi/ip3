@@ -1,25 +1,32 @@
 // user interface logic
 $(document).ready(function(){
-  $("form#ping-pong").submit(function(event){
+  $("form").click(function(event){
     event.preventDefault();
-    var number = parseInt($("input#number").val());
-    var result = pingPong(number);
-    $("#result").text(result);
+    var number =$("#number").val();
+    var result = parseInt(number);
+    user(result);
+    my.forEach(function(result){
+    $("#outcome").append("<li>" + result + "</li>");
   });
+});
 });
 
 // business logic
-var pingPong = function(number) {
-  if ((number % 3 === 0) && (number % 5 === 0)) {
-    return "pingpong";
+var my=[];
+  function user(result){
+    for(index=1;index<=result;index++){
+
+  if (index % 15 === 0) {
+    my.push("pingpong");
 }
-  else if ((number % 3 === 0)){
-    return "ping";
+  else if (index % 3 === 0){
+    my.push("ping");
 }
-  else if ((number % 5 === 0)){
-    return "pong";
+  else if (index % 5 === 0){
+    my.push("pong");
   }
   else {
-    return "nil";
+    my.push(index);
   }
-};
+}
+}
