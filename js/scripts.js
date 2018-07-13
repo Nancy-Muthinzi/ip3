@@ -1,14 +1,16 @@
+// user interface logic
 $(document).ready(function(){
   $("form#ping-pong").submit(function(event){
     event.preventDefault();
     var number = parseInt($("input#number").val());
     var result = pingPong(number);
-    $("#results").append("<li>"+number+"</li>");
+    $("#result").text(result);
   });
 });
 
-var pingPong = (function(number){
-  // if ((number % 3 === 0) && (number % 5 === 0)) {
+// business logic
+var pingPong = function(number) {
+  if ((number % 3 === 0) && (number % 5 === 0)) {
     return "pingpong";
 }
   else if ((number % 3 === 0)){
@@ -18,6 +20,6 @@ var pingPong = (function(number){
     return "pong";
   }
   else {
-    return "index";
+    return "nil";
   }
-});
+};
