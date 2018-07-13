@@ -3,12 +3,12 @@ $(document).ready(function(){
     event.preventDefault();
     var number = parseInt($("input#number").val());
     var result = pingPong(number);
-    $("#result").text(result);
+    $("#results").append("<li>"+number+"</li>");
   });
 });
 
-var pingPong = function(number) {
-  if ((number % 3 === 0) && (number % 5 === 0)) {
+var pingPong = (function(number){
+  // if ((number % 3 === 0) && (number % 5 === 0)) {
     return "pingpong";
 }
   else if ((number % 3 === 0)){
@@ -18,6 +18,6 @@ var pingPong = function(number) {
     return "pong";
   }
   else {
-    return "nil";
+    return "index";
   }
-};
+});
